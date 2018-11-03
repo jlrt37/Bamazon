@@ -1,7 +1,6 @@
 # Bamazon
 
 Before beginning program
-  
   Download the latest version of Node https://nodejs.org/en/
   Using MYSQL, create a database called 'Bamazon'. 
     - Reference schema.sql
