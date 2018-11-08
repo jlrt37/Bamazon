@@ -2,18 +2,18 @@ CREATE DATABASE Bamazon;
 
 USE Bamazon;
 
-CREATE TABLE Products(
-    ItemID MEDIUMINT AUTO_INCREMENT NOT NULL,
-    ProductName VARCHAR(100) NOT NULL,
-    DepartmentName VARCHAR(50) NOT NULL,
-    Price DECIMAL(10,2) NOT NULL,
-    StockQuantity INT(10) NOT NULL,
-    primary key(ItemID)
+CREATE TABLE products (
+	item_id INTEGER(11) NOT NULL,
+	products VARCHAR(30) NOT NULL,
+	department VARCHAR(20) NOT NULL,
+	price DECIMAL(10,2) NOT NULL,
+	stock INTEGER(11) NOT NULL,
+	PRIMARY KEY (item_id)
 );
 
-select * from Products;
+select * from products;
 
-INSERT INTO Products(ProductName,DepartmentName,Price,StockQuantity)
+INSERT INTO products(product,department,price,stock)
 VALUES ("BLADE RUNNER","ENTERTAINMENT",29.99,150),
     ("STAR WARS: EWOKS CARVAN OF COURAGE","ENTERTAINMENT",9.99,50),
     ("BUNCH OF BANANAS","GROCERY",9.85,50),
@@ -25,8 +25,8 @@ VALUES ("BLADE RUNNER","ENTERTAINMENT",29.99,150),
     ("SAM AND MAX HIT THE ROAD","ENTERTAINMENT",19.99,35),
     ("CURSE OF MONKEY ISLAND","ENTERTAINMENT",19.95,35);
 
-CREATE TABLE Departments(
-    DepartmentID MEDIUMINT AUTO_INCREMENT NOT NULL,
+CREATE TABLE departments(
+    DepartmentID INT NOT NULL,
     DepartmentName VARCHAR(50) NOT NULL,
     OverHeadCosts DECIMAL(10,2) NOT NULL,
     TotalSales DECIMAL(10,2) NOT NULL,
